@@ -1,7 +1,20 @@
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
 .pagination-dots {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 .dot {
@@ -17,16 +30,36 @@
   color: transparent;
   cursor: pointer;
   transition: background-color 0.3s;
-  border: 1px solid #ccc; 
+  border: 1px solid #ccc;
 }
 
 .dot.active {
-  background-color: #007bff; 
+  background-color: #ff0000;
   color: #fff;
 }
 
-.error {
-  color: red;
-  margin-top: 5px;
-  font-size: 12px;
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.navigation-buttons button {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navigation-buttons .prev-button {
+  background-color: rgb(86, 5, 235);
+  color: white;
+}
+
+.navigation-buttons .next-button {
+  background-color: rgb(252, 6, 170);
+  color: white;
 }
