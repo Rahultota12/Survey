@@ -1,0 +1,32 @@
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 30px;
+  width: 30px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 1px solid #ccc; /* Optional for better visibility */
+}
+
+.dot.active {
+  background-color: #007bff; 
+  color: #fff;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+  font-size: 12px;
+}
