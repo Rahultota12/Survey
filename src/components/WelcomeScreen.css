@@ -1,0 +1,10 @@
+.red{
+color: white;
+  background-color: rgb(81, 9, 248);
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
