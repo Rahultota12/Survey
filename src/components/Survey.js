@@ -1,8 +1,9 @@
+// src/components/Survey.js
 import React, { useState } from 'react';
 import Question from './Question';
 import '../Survey.css';
 
-const Survey = () => {
+const Survey = ({ onComplete }) => {
   const [questions, setQuestions] = useState([
     { id: 1, text: 'How satisfied are you with our products?', type: 'rating', max: 5 },
     { id: 2, text: 'How fair are the prices compared to similar retailers?', type: 'rating', max: 5 },
@@ -22,6 +23,9 @@ const Survey = () => {
   const handleNext = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      // Call onComplete when the survey is finished
+      onComplete(answers, 'sessionId'); // Replace 'sessionId' with the actual session ID if available
     }
   };
 
@@ -30,6 +34,8 @@ const Survey = () => {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
     }
   };
+
+  
 
   const handleAddQuestion = () => {
     if (newQuestion.text.trim() === '') {
@@ -67,7 +73,6 @@ const Survey = () => {
       {currentQuestionIndex < questions.length ? (
         <Question
           question={questions[currentQuestionIndex]}
-          questionNumber={currentQuestionIndex + 1}  
           onAnswer={handleAnswer}
           onNext={handleNext}
           onPrevious={handlePrevious}
@@ -113,6 +118,7 @@ const Survey = () => {
       )}
 
       <button className="delete-button" onClick={handleDeleteQuestion}>Delete Question</button>
+
     </div>
   );
 };
