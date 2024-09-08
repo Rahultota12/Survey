@@ -1,4 +1,3 @@
-// src/components/Survey.js
 import React, { useState } from 'react';
 import Question from './Question';
 import '../Survey.css';
@@ -24,8 +23,8 @@ const Survey = ({ onComplete }) => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
-      // Call onComplete when the survey is finished
-      onComplete(answers, 'sessionId'); // Replace 'sessionId' with the actual session ID if available
+      
+      onComplete(answers, 'sessionId');
     }
   };
 

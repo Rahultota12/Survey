@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import WelcomeScreen from './components/WelcomeScreen';
 import Survey from './components/Survey';
